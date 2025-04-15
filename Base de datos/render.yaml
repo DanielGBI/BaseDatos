@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: mysql-container
+    env: docker
+    plan: free
+    autoDeploy: false
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: MYSQL_ROOT_PASSWORD
+        value: 12345
+      - key: MYSQL_DATABASE
+        value: test
+      - key: MYSQL_USER
+        value: user
+      - key: MYSQL_PASSWORD
+        value: password
